@@ -1,0 +1,2861 @@
+  [1m[35m (5.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE DATABASE `stamp_app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE DATABASE `stamp_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+Started GET "/tweets/1" for ::1 at 2020-03-20 03:02:35 +0900
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/tweets/1"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-03-20 03:02:42 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 28ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-20 03:02:46 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 20ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-20 03:04:36 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1149ms (Views: 1141.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-20 03:06:09 +0900
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant PostsController::Post):
+  
+app/controllers/posts_controller.rb:3:in `index'
+Started GET "/posts" for ::1 at 2020-03-20 03:07:05 +0900
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant PostsController::Post):
+  
+app/controllers/posts_controller.rb:3:in `index'
+Started GET "/posts" for ::1 at 2020-03-20 03:08:22 +0900
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant PostsController::Post):
+  
+app/controllers/posts_controller.rb:3:in `index'
+  [1m[35m (2.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE DATABASE `stamp_app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE DATABASE `stamp_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (19.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (26.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `stamp_app_development`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (3.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `stamp_app_test`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE DATABASE `stamp_app_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE DATABASE `stamp_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (50.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT GET_LOCK('2999687646783310035', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePosts (20200319182018)
+  [1m[35m (27.7ms)[0m  [1m[35mCREATE TABLE `posts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `stamp_id` int, `content` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20200319182018_create_posts.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200319182018')[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (4.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (5.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-03-20 17:00:02', '2020-03-20 17:00:02')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('2999687646783310035')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Started GET "/posts" for ::1 at 2020-03-21 02:17:11 +0900
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:1
+  Rendered posts/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 314ms (Views: 285.9ms | ActiveRecord: 9.9ms)
+
+
+  [1m[35m (3.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2999687646783310035', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateStamps (20200320172502)
+  [1m[35m (36.8ms)[0m  [1m[35mCREATE TABLE `stamps` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `image` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20200320172502_create_stamps.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200320172502')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2999687646783310035')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Started GET "/posts/new" for ::1 at 2020-03-21 03:31:02 +0900
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 422ms (Views: 411.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-21 03:41:50 +0900
+  [1m[35m (2.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:1
+  Rendered posts/index.html.erb within layouts/application (100.8ms)
+Completed 200 OK in 276ms (Views: 190.4ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/new" for ::1 at 2020-03-21 03:42:07 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/news" for ::1 at 2020-03-21 03:42:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/news"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/new" for ::1 at 2020-03-21 03:42:19 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 98ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-21 03:47:46 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 147ms (Views: 117.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-21 03:47:48 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 58ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-26 15:53:00 +0900
+  [1m[35m (3.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 317ms (Views: 302.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-26 16:00:12 +0900
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (32.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 109ms (Views: 63.1ms | ActiveRecord: 38.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-26 16:00:14 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/main" for ::1 at 2020-03-26 16:00:22 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/main"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-03-26 16:02:06 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 17ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-26 16:02:16 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (13.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 110ms (Views: 76.0ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-26 16:02:18 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/main" for ::1 at 2020-03-26 16:02:23 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/main"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-26 16:06:40 +0900
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 354ms (Views: 332.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-26 16:06:43 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2020-03-26 16:06:47 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6pZ1rFcw8QXXJUakTu4HskVX2Ohqgc+FusxWsvjwU+3xG2sDcs5cqkhVp5g6LA/QVAurjNyZH94E0ZX8N4CkIw==", "content"=>"test"}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `created_at`, `updated_at`) VALUES ('test', '2020-03-26 07:06:47', '2020-03-26 07:06:47')[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:10
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 62ms (Views: 49.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-26 16:06:48 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 38ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-26 17:47:51 +0900
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (446.4ms)
+Completed 500 Internal Server Error in 482ms (ActiveRecord: 5.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comment' for #<#<Class:0x00007fa90da82970>:0x00007fa9093ee4c8>):
+     9:     </div>
+    10:     <div class="post-content">
+    11:       <%= post.content %>
+    12:       <%= comment.user.nicknamev %>
+    13:     </div>
+    14:   </div>
+    15: <% end %>
+  
+app/views/posts/index.html.erb:12:in `block in _app_views_posts_index_html_erb___4012674568939084578_70182027664700'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___4012674568939084578_70182027664700'
+Started GET "/posts" for ::1 at 2020-03-26 17:49:56 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (309.0ms)
+Completed 500 Internal Server Error in 323ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa90da82970>:0x00007fa90db79d38>):
+     9:     </div>
+    10:     <div class="post-content">
+    11:       <%= post.content %>
+    12:       <strong><%= link_to stamp.user.name, "/stamps/#{comment.stamp_id}" %>：</strong>
+    13:     </div>
+    14:   </div>
+    15: <% end %>
+  
+app/views/posts/index.html.erb:12:in `block in _app_views_posts_index_html_erb___4012674568939084578_70182028170640'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___4012674568939084578_70182028170640'
+Started GET "/posts" for ::1 at 2020-03-26 17:50:36 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 291ms (Views: 286.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-26 17:52:50 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (422.4ms)
+Completed 500 Internal Server Error in 436ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa90da82970>:0x00007fa90964eba0>):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="stamp-content">
+    14:       <%= stamp.name %>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb___4012674568939084578_70181991932300'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___4012674568939084578_70181991932300'
+Started GET "/posts" for ::1 at 2020-03-26 18:30:47 +0900
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 88ms (Views: 72.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-26 18:39:33 +0900
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `stamp' for #<PostsController:0x00007fa9097069f8>):
+  
+app/controllers/posts_controller.rb:4:in `index'
+Started GET "/posts" for ::1 at 2020-03-26 18:40:54 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1>トップページ</h1>
+    2: 
+    3: <%= link_to '新規投稿', '/posts/new' %>
+    4: <%= @stamp.name %>
+    5: <% @posts.each do |post| %>
+    6:   <div class="post">
+    7:     <div class="post-date">
+  
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70181990995320'
+Started GET "/posts" for ::1 at 2020-03-26 18:43:54 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (76.3ms)
+Completed 200 OK in 134ms (Views: 119.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-26 18:47:37 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 63ms (Views: 55.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stamps/1" for ::1 at 2020-03-26 18:48:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stamps/1"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-26 18:48:12 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 43ms (Views: 37.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 01:35:06 +0900
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (1.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 155ms (Views: 138.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 01:38:31 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (38.3ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 5.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `symbolize_keys' for "/stamps/1":String):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><%= image_tag post.stamp.image, "/stamps/#{post.stamp_id}" %>：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70182030211520'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70182030211520'
+Started GET "/posts" for ::1 at 2020-03-27 01:39:13 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (599.5ms)
+Completed 500 Internal Server Error in 618ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa909491740>:0x00007fa9096f7c78>):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><%= image_tag stamp.image, "/stamps/#{post.stamp_id}" %>：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70181992262620'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70181992262620'
+Started GET "/posts" for ::1 at 2020-03-27 01:39:42 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (3.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (29.4ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 9.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for nil:NilClass):
+    14: <% end %>
+    15: 
+    16: <div calss="contents-image">
+    17:   <%= image_tag @post.stamp.image, alt: 'user-icon', class: 'user-image' %>
+    18: </div>
+  
+app/views/posts/index.html.erb:17:in `_app_views_posts_index_html_erb___4012674568939084578_70182002614500'
+Started GET "/posts" for ::1 at 2020-03-27 01:40:18 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.2ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (337.8ms)
+Completed 500 Internal Server Error in 353ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fa909491740>:0x00007fa90ac08e50>
+Did you mean?  @posts):
+    14: <% end %>
+    15: 
+    16: <div calss="contents-image">
+    17:   <%= image_tag post.stamp.image, alt: 'user-icon', class: 'user-image' %>
+    18: </div>
+  
+app/views/posts/index.html.erb:17:in `_app_views_posts_index_html_erb___4012674568939084578_70182003297200'
+Started GET "/posts" for ::1 at 2020-03-27 01:40:28 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (14.3ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for nil:NilClass):
+    14: <% end %>
+    15: 
+    16: <div calss="contents-image">
+    17:   <%= image_tag @post.stamp.image, alt: 'user-icon', class: 'user-image' %>
+    18: </div>
+  
+app/views/posts/index.html.erb:17:in `_app_views_posts_index_html_erb___4012674568939084578_70181994971520'
+Started GET "/posts" for ::1 at 2020-03-27 01:50:08 +0900
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (33.2ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for nil:NilClass):
+    14: <% end %>
+    15: 
+    16: <div calss="contents-image">
+    17:   <%= image_tag @post.stamp.image, alt: 'user-icon', class: 'user-image' %>
+    18: </div>
+  
+app/views/posts/index.html.erb:17:in `_app_views_posts_index_html_erb___4012674568939084578_70182028998500'
+Started GET "/posts" for ::1 at 2020-03-27 01:54:32 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for nil:NilClass):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><%= @post.stamp.image %>：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70182047826180'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70182047826180'
+Started GET "/posts" for ::1 at 2020-03-27 01:54:42 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><%= @stamp.image %>：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70182002485900'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70182002485900'
+Started GET "/posts" for ::1 at 2020-03-27 02:03:48 +0900
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_name' for nil:NilClass):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><img src="<%= "#{@stamp.image_name}" %>">：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70181995744560'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70181995744560'
+Started GET "/posts" for ::1 at 2020-03-27 02:03:58 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><img src="<%= "#{@stamp.image}" %>">：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70182002654520'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70182002654520'
+Started GET "/posts" for ::1 at 2020-03-27 02:04:38 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 110ms (Views: 101.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:04:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:06:16 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (6.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 66ms (Views: 48.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:06:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:07:02 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 65ms (Views: 59.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stamp.image" for ::1 at 2020-03-27 02:07:02 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:08:25 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 67ms (Views: 61.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stamp.image" for ::1 at 2020-03-27 02:08:25 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:08:49 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 61ms (Views: 55.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stamp.image" for ::1 at 2020-03-27 02:08:49 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:09:02 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:09:02 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:11:02 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (201.5ms)
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `img' for #<#<Class:0x00007fa909491740>:0x00007fa909d3b648>):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><%= img src= "post.stamp.image", "/stamps/#{post.stamp_id}" %>：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70181995536300'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70181995536300'
+Started GET "/posts" for ::1 at 2020-03-27 02:11:19 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (324.2ms)
+Completed 500 Internal Server Error in 351ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `img' for #<#<Class:0x00007fa909491740>:0x00007fa909776e60>):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><%= img src= post.stamp.image, "/stamps/#{post.stamp_id}" %>：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70181992522340'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70181992522340'
+Started GET "/posts" for ::1 at 2020-03-27 02:11:53 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 77ms (Views: 70.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:14:30 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 62ms (Views: 56.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:14:42 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 69ms (Views: 62.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:14:51 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 63ms (Views: 57.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:14:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:16:19 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 58ms (Views: 52.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:16:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:18:47 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 125ms (Views: 107.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:18:47 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:22:24 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `symbolize_keys' for "1":String):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><%= image_tag "post.stamp.image", "#{post.stamp_id}" %>：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70182041616560'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70182041616560'
+Started GET "/posts" for ::1 at 2020-03-27 02:22:43 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `symbolize_keys' for "1":String):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <strong><%= image_tag post.stamp.image ,"#{post.stamp_id}" %>：</strong>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70181991703900'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70181991703900'
+Started GET "/posts" for ::1 at 2020-03-27 02:23:06 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 66ms (Views: 59.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:23:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:23:52 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 47ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:23:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:23:56 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:23:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:24:08 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 41ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:24:08 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:26:14 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"stamp_image", :controller=>"samples", :id=>1}):
+     7:       投稿日時：<%= post.created_at %>
+     8:     </div>
+     9:     <div class="post-content">
+    10:     <%= image_tag(url_for(:controller => 'samples', :action => 'stamp_image', :id => 1), :size => '100x100') %>
+    11:       <%= post.content %>
+    12:     </div>
+    13:   </div>
+  
+app/views/posts/index.html.erb:10:in `block in _app_views_posts_index_html_erb___4012674568939084578_70182040423860'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___4012674568939084578_70182040423860'
+Started GET "/posts" for ::1 at 2020-03-27 02:26:27 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 59ms (Views: 53.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:26:27 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:31:03 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp_app/app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...osts/send_img?stamp_id=1" width="100" height="100" );@output...
+...                          ^~~~~
+/Users/hachinomasahiro/Desktop/stamp_app/app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...?stamp_id=1" width="100" height="100" );@output_buffer.safe_...
+...                         ^~~~~~):
+  
+app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/posts" for ::1 at 2020-03-27 02:31:46 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp_app/app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...c="/stamps/send_img?id=1" width="100" height="100" );@output...
+...                          ^~~~~
+/Users/hachinomasahiro/Desktop/stamp_app/app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nd_img?id=1" width="100" height="100" );@output_buffer.safe_...
+...                         ^~~~~~):
+  
+app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/posts/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/posts" for ::1 at 2020-03-27 02:33:51 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 105ms (Views: 90.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:33:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:39:27 +0900
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 74ms (Views: 68.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:39:27 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/new" for ::1 at 2020-03-27 02:39:29 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/post.stamp.image" for ::1 at 2020-03-27 02:39:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/posts" for ::1 at 2020-03-27 02:39:32 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QUbDddqOECzngyCvN2FidRXNPWkKyeAFS+wNXmTqgVNay93a/3C9g3jzwZNDo2oXBJFODbzRMF718c4Qq5p2nQ==", "content"=>"a"}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/posts_controller.rb:10
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 108ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:39:33 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 42.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:39:33 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:39:36 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post.stamp.image" for ::1 at 2020-03-27 02:39:36 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/post.stamp.image"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-03-27 02:41:27 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 69ms (Views: 62.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-27 02:41:39 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2020-03-27 02:41:42 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Uq+uN62yfb4s2+qI62PaOvCFgar0XLbE9LMEb6azfHOx6AX+0hkWWfDjpZXb4cK+p5lYh3JooCtzw9fceo6Pw==", "content"=>"test"}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/posts_controller.rb:10
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 94ms (Views: 88.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:41:43 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 43ms (Views: 37.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:42:51 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.2ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 52ms (Views: 45.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-27 02:43:03 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2020-03-27 02:43:09 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"48ucG339cBe6XSdbDFY9S5SDYjez4Cg8dJ9vWH8bs374RoK0WAPduCUtxmd4lDUphd8RUwX4+GfKgqwWsGtEsA==", "content"=>"testll"}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/posts_controller.rb:10
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 35.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:43:10 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.2ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 46ms (Views: 39.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:45:55 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 195ms (Views: 178.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:51:40 +0900
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-27 02:51:45 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 53ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2020-03-27 02:51:49 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rEG+Gsain/qYyDoE6zXFPWESeOqVzY477XNLjUwGqt23zKC141wyVQe42zif981fcE4LjiPVXmBTbojDg3ZdEw==", "content"=>"test2"}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/posts_controller.rb:10
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 93ms (Views: 76.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:51:50 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 36ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-27 02:52:54 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2020-03-27 02:52:57 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sACatkE9TfUHms8y3/g5jbZ43ddN0QonKx3Ad62yeGurjYQZZMPgWpjqLg6rOjHvpySus/vJ2nyVAAM5YsKPpQ==", "content"=>"a"}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[36mPost Create (4.3ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `created_at`, `updated_at`) VALUES ('a', '2020-03-26 17:52:57', '2020-03-26 17:52:57')[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:10
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 120ms (Views: 58.8ms | ActiveRecord: 40.9ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 02:52:58 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 45ms (Views: 38.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-03-27 02:53:17 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-03-27 03:01:13 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (383.0ms)
+Completed 500 Internal Server Error in 407ms (ActiveRecord: 4.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa90aabc920>:0x00007fa90f41a838>):
+    13:   </div>
+    14: <% end %>
+    15: 
+    16:   <div class="content_post" style="background-image: url(<%= stamp.image %>);">
+    17:   </div>
+  
+app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb___4012674568939084578_70182002616580'
+Started GET "/posts" for ::1 at 2020-03-27 03:01:23 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (301.5ms)
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa90aabc920>:0x00007fa90a9a0c08>):
+    13:   </div>
+    14: <% end %>
+    15: 
+    16:   <div class="content_post" style="background-image: url(<%= stamp.image %>);">
+    17:   </div>
+  
+app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb___4012674568939084578_70182002037080'
+Started GET "/posts" for ::1 at 2020-03-27 03:02:51 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (413.9ms)
+Completed 500 Internal Server Error in 430ms (ActiveRecord: 6.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa90ab2c1d0>:0x00007fa90de9e6f8>):
+    13:   </div>
+    14: <% end %>
+    15: 
+    16:   <div class="content_post" style="background-image: url(<%= stamp.image %>);">
+    17:   </div>
+  
+app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb___4012674568939084578_70182002844900'
+Started GET "/posts" for ::1 at 2020-03-27 03:04:15 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    14: <% end %>
+    15: 
+    16: <div class="contents row">
+    17:   <% @stamps.each do |stamp| %>
+    18:     <div class="content_post" style="background-image: url(<%= stamp.image %>);">
+    19:       <span class="name">
+    20:         <%= stamp.name %>
+  
+app/views/posts/index.html.erb:17:in `_app_views_posts_index_html_erb___4012674568939084578_70182041622480'
+Started GET "/posts" for ::1 at 2020-03-27 03:04:47 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp_app/app/views/posts/index.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/posts/index.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/posts" for ::1 at 2020-03-27 03:04:59 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (299.9ms)
+Completed 500 Internal Server Error in 313ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa90ab2c1d0>:0x00007fa90f53a7e0>):
+    14: <% end %>
+    15: 
+    16:   <div class="contents row">
+    17:     <div class="content_post" style="background-image: url(<%= stamp.image %>);">
+    18:       <span class="name">
+    19:         <%= stamp.name %>
+    20:       </span>
+  
+app/views/posts/index.html.erb:17:in `_app_views_posts_index_html_erb___4012674568939084578_70182041671820'
+Started GET "/posts" for ::1 at 2020-03-27 03:05:35 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (339.5ms)
+Completed 500 Internal Server Error in 353ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fa90ab2c1d0>:0x00007fa90f3c2f70>
+Did you mean?  @posts):
+    14: <% end %>
+    15: 
+    16:   <div class="contents row">
+    17:     <div class="content_post" style="background-image: url(<%= post.stamp.image %>);">
+    18:       <span class="name">
+    19:         <%= stamp.name %>
+    20:       </span>
+  
+app/views/posts/index.html.erb:17:in `_app_views_posts_index_html_erb___4012674568939084578_70182040902720'
+Started GET "/posts" for ::1 at 2020-03-27 03:06:12 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (419.4ms)
+Completed 500 Internal Server Error in 445ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa90ab2c1d0>:0x00007fa90dd9f1d0>):
+    14: <% end %>
+    15: 
+    16:   <div class="contents row">
+    17:     <div class="content_post" style="background-image: url(<%= stamp.image %>);">
+    18:       <span class="name">
+    19:         <%= stamp.name %>
+    20:       </span>
+  
+app/views/posts/index.html.erb:17:in `_app_views_posts_index_html_erb___4012674568939084578_70182039716860'
+Started GET "/posts" for ::1 at 2020-03-27 03:07:40 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (328.2ms)
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa90ab2c1d0>:0x00007fa90df2d510>):
+    14: <% end %>
+    15: 
+    16:   <div class="contents row">
+    17:     <div class="content_post" style="background-image: url(<%= stamp.image %>);">
+    18:       <span class="name">
+    19:         <%= stamp.name %>
+    20:     </div>
+  
+app/views/posts/index.html.erb:17:in `_app_views_posts_index_html_erb___4012674568939084578_70182030110660'
+Started GET "/posts" for ::1 at 2020-03-27 03:09:36 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (301.6ms)
+Completed 500 Internal Server Error in 315ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007fa90ab2c1d0>:0x00007fa90f35ca18>):
+    13:   </div>
+    14: <% end %>
+    15: 
+    16:     <div class="content_post" style="background-image: url(<%= stamp.image %>);">
+    17:     </div>
+  
+app/views/posts/index.html.erb:16:in `_app_views_posts_index_html_erb___4012674568939084578_70182040695340'
+Started GET "/posts" for ::1 at 2020-03-27 03:09:59 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 62ms (Views: 56.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-06 07:53:54 +0900
+  [1m[35m (13.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 377ms (Views: 353.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-06 07:53:56 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2020-04-06 07:54:19 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7aQAG9LHTtmXVujCVqw/UUwqjGPj518nfY6SG/remnn2KR609znjdggmCf4ibjczXXb/B1X/j3zDk1FVNa5ttw==", "content"=>"4/6"}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[36mPost Create (14.9ms)[0m  [1m[32mINSERT INTO `posts` (`content`, `created_at`, `updated_at`) VALUES ('4/6', '2020-04-05 22:54:19', '2020-04-05 22:54:19')[0m
+  ↳ app/controllers/posts_controller.rb:10
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:10
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 28.9ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-06 07:54:21 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-06 08:06:42 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (348.8ms)
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `stamp' for #<#<Class:0x00007f8232173890>:0x00007f822f4edc08>):
+    10:     <div class="post-content">
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="content_post" style="background-image: url(<%= stamp.image %>);">
+    14:   </div>
+    15:   </div>
+    16: <% end %>
+  
+app/views/posts/index.html.erb:13:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098558087820'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098558087820'
+Started GET "/posts" for ::1 at 2020-04-06 08:14:41 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (191.2ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_stamp' for #<#<Class:0x00007f8232173890>:0x00007f822f548a18>
+Did you mean?  posts_path):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content">
+    14:       <%= image_tag post_stamp(post).image.url , class: :img_show %>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098558273940'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098558273940'
+Started GET "/posts" for ::1 at 2020-04-06 08:15:10 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (226.4ms)
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<#<Class:0x00007f8232173890>:0x00007f822f53fcb0>
+Did you mean?  posts_path
+               font_path):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content">
+    14:       <%= image_tag post_path(post).image.url , class: :img_show %>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098597913340'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098597913340'
+Started GET "/posts" for ::1 at 2020-04-06 08:15:22 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for "/posts.1":String):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content">
+    14:       <%= image_tag posts_path(post).image.url , class: :img_show %>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098553306700'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098553306700'
+Started GET "/posts" for ::1 at 2020-04-06 08:26:32 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for #<Post:0x00007f822e85d308>
+Did you mean?  stamp_id):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content">
+    14:     <strong><%= link_to post.stamp.image, "/stamps/#{comment.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098555844020'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098555844020'
+Started GET "/posts" for ::1 at 2020-04-06 08:27:04 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for #<Post:0x00007f822f4dc458>
+Did you mean?  stamp_id):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content">
+    14:     <strong><%= link_to post.stamp.image, "/stamps/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098553386000'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098553386000'
+Started GET "/posts" for ::1 at 2020-04-06 08:27:21 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for #<Post:0x00007f82322ed450>
+Did you mean?  stamp_id):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content">
+    14:     <strong><%= link_to post.stamp.image, "/posts/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098551578860'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098551578860'
+Started GET "/posts" for ::1 at 2020-04-06 08:27:38 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (17.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (36.9ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 17.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for #<Post:0x00007f82339a0328>
+Did you mean?  stamp_id):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content">
+    14:     <strong><%= link_to post.stamp.id, "/posts/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098594181880'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098594181880'
+Started GET "/posts" for ::1 at 2020-04-06 08:28:13 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp_app/app/views/posts/index.html.erb:14: syntax error, unexpected '.'
+... post.stamp.image, "/stamps/#{.stamp_id}" );@output_buffer.s...
+...                              ^):
+  
+app/views/posts/index.html.erb:14: syntax error, unexpected '.'
+Started GET "/posts" for ::1 at 2020-04-06 08:29:44 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for #<Post:0x00007f8233996530>
+Did you mean?  stamp_id):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content">
+    14:     <strong><%= link_to post.stamp.name, "/stamps/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098594095840'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098594095840'
+Started GET "/posts" for ::1 at 2020-04-06 08:30:06 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for #<Post:0x00007f822f1571e8>
+Did you mean?  stamp_id):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content">
+    14:     <strong><%= link_to post.stamp.name, "/stamps/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098582387600'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098582387600'
+Started GET "/posts" for ::1 at 2020-04-06 08:30:57 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for #<Post:0x00007f822f51a370>
+Did you mean?  stamp_id):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:     <strong><%= link_to post.stamp.id, "/posts/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098597635500'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098597635500'
+Started GET "/posts" for ::1 at 2020-04-06 08:33:06 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (3.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 128ms (Views: 98.4ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-06 08:33:55 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 60ms (Views: 54.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-06 08:41:34 +0900
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `symbolize_keys' for "/posts/1":String):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:     <strong><%= image_tag("post.stamp.image", "/posts/#{post.stamp_id}") %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098558494620'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098558494620'
+Started GET "/posts" for ::1 at 2020-04-06 08:42:22 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.9ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `symbolize_keys' for "/posts/1":String):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:     <strong><%= image_tag(post.stamp.image, "/posts/#{post.stamp_id}") %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098583828500'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098583828500'
+Started GET "/posts" for ::1 at 2020-04-06 08:42:39 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `symbolize_keys' for "/posts/1":String):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:     <strong><%= image_tag post.stamp.image, "/posts/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098558396220'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098558396220'
+Started GET "/posts" for ::1 at 2020-04-06 08:46:27 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp' for nil:NilClass):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:     <strong><%= image_tag (@post.stamp.image.url), "/posts/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098552551460'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098552551460'
+Started GET "/posts" for ::1 at 2020-04-06 08:46:42 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:     <strong><%= image_tag (@stamp.image.url), "/posts/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098553783440'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098553783440'
+Started GET "/posts" for ::1 at 2020-04-06 08:47:02 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp_app/app/views/posts/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+...=( image_tag(@stamp.image.url), "/posts/#{post.stamp_id}" );...
+...                              ^):
+  
+app/views/posts/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+Started GET "/posts" for ::1 at 2020-04-06 08:47:37 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp_app/app/views/posts/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+...image_tag(post.tamp.image.url), "/posts/#{post.stamp_id}" );...
+...                              ^):
+  
+app/views/posts/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+Started GET "/posts" for ::1 at 2020-04-06 08:47:44 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp_app/app/views/posts/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+...d=( image_tag(post.tamp.image), "/posts/#{post.stamp_id}" );...
+...                              ^):
+  
+app/views/posts/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+Started GET "/posts" for ::1 at 2020-04-06 08:48:01 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `tamp' for #<Post:0x00007f822f4a5bd8>
+Did you mean?  tap
+               stamp):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:     <strong><%= image_tag post.tamp.image , "/posts/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098553315380'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098553315380'
+Started GET "/posts" for ::1 at 2020-04-06 08:50:02 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `tamp' for #<Post:0x00007f822f482340>
+Did you mean?  tap
+               stamp):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:       <%= link_to image_tag post.tamp.image , "/posts/#{post.stamp_id}" %>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098541367900'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098541367900'
+Started GET "/posts" for ::1 at 2020-04-06 08:50:33 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `tamp' for #<Post:0x00007f8232763980>
+Did you mean?  tap
+               stamp):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:     <strong><%= link_to post.tamp.image , "/posts/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098553238320'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098553238320'
+Started GET "/posts" for ::1 at 2020-04-06 08:50:49 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 69ms (Views: 63.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-06 08:51:15 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `symbolize_keys' for "/posts/1":String):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-content-img">
+    14:     <strong><%= link_to image_tag post.stamp.image , "/posts/#{post.stamp_id}" %>：</strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb__2176338215234090251_70098594994860'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2176338215234090251_70098594994860'
