@@ -10,8 +10,8 @@
     <div class="post-content">
       <%= post.content %>
     </div>
-    <div class="post-content-img">
-    <strong><%= image_tag post.stamp.image , "/posts/#{post.stamp_id}" %>：</strong>
+    <div class="post-stamp-image">
+      <strong><%= link_to image_tag(post.stamp.image , width: '375'), "/posts/#{post.stamp_id}" %></strong>
     </div>
   </div>
 <% end %>

@@ -1,5 +1,6 @@
 <h1>新規投稿ページ</h1>
 <%= form_tag('/posts', method: :post) do %> 
-  <input type="text" name="content"> 
+  <input type="text" name="content"> : テキストを入力してください<br>
+  <input type="tel" name="stamp_id"　maxlength="1"> : スタンプの画像を数字で入力してください<br>
   <input type="submit" value="投稿する">
 <% end %>
