@@ -7264,3 +7264,378 @@ Processing by StampsController#index as HTML
 Completed 200 OK in 60ms (Views: 52.1ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/stamps" for ::1 at 2020-04-11 02:56:18 +0900
+  [1m[35m (19.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by StampsController#index as HTML
+  Rendering stamps/index.html.erb within layouts/application
+  [1m[36mStamp Load (24.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendered stamps/index.html.erb within layouts/application (87.5ms)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 46.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Stamp::ActiveRecord_Relation:0x00007fa2b7512938>):
+    1: <h1>スタンプ一覧</h1>
+    2:   
+    3: 
+    4:   <%= image_tag @stamp.image %>
+  
+app/views/stamps/index.html.erb:4:in `_app_views_stamps_index_html_erb___2492752455783801261_70168418485660'
+Started GET "/stamps" for ::1 at 2020-04-11 02:56:58 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (4.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 98ms (Views: 70.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 02:59:53 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <h1>新規投稿ページ</h1>
+    2: <%= image_tag @stamp.image %>
+    3: <%= form_tag('/posts', method: :post) do %> 
+    4:   <input type="text" name="content"> : テキストを入力してください<br>
+    5:   <input type="tel" name="stamp_id"　maxlength="1"> : スタンプの画像を数字で入力してください<br>
+  
+app/views/posts/new.html.erb:2:in `_app_views_posts_new_html_erb__2820394087672612788_70168371827380'
+Started GET "/posts" for ::1 at 2020-04-11 03:00:11 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (3.9ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (1.8ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 142ms (Views: 112.2ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 03:00:18 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <h1>新規投稿ページ</h1>
+    2: <%= image_tag @stamp.image %>
+    3: <%= form_tag('/posts', method: :post) do %> 
+    4:   <input type="text" name="content"> : テキストを入力してください<br>
+    5:   <input type="tel" name="stamp_id"　maxlength="1"> : スタンプの画像を数字で入力してください<br>
+  
+app/views/posts/new.html.erb:2:in `_app_views_posts_new_html_erb__2820394087672612788_70168403515240'
+Started GET "/posts" for ::1 at 2020-04-11 03:00:20 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 78ms (Views: 71.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 03:00:27 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <h1>新規投稿ページ</h1>
+    2: <%= image_tag @stamp.image %>
+    3: <%= form_tag('/posts', method: :post) do %> 
+    4:   <input type="text" name="content"> : テキストを入力してください<br>
+    5:   <input type="tel" name="stamp_id"　maxlength="1"> : スタンプの画像を数字で入力してください<br>
+  
+app/views/posts/new.html.erb:2:in `_app_views_posts_new_html_erb__2820394087672612788_70168406097560'
+Started GET "/posts" for ::1 at 2020-04-11 03:00:29 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (2.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 81ms (Views: 75.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/satamps" for ::1 at 2020-04-11 03:00:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/satamps"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/stamps" for ::1 at 2020-04-11 03:00:45 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 65ms (Views: 57.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 03:02:39 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (0.7ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (14.2ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 248ms (Views: 138.3ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 03:03:48 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 11.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <h1>スタンプ一覧</h1>
+    2: <%= image_tag @stamp.image %>
+    3: <%= image_tag @stamp2.image %>
+    4: <%= image_tag @stamp3.image %>
+  
+app/views/stamps/index.html.erb:4:in `_app_views_stamps_index_html_erb___2492752455783801261_70168364247780'
+Started GET "/stamps" for ::1 at 2020-04-11 03:04:22 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (1.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 83ms (Views: 49.6ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 03:15:43 +0900
+  [1m[35m (3.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (1.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (1.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (1.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 152ms (Views: 124.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/satamps" for ::1 at 2020-04-11 03:15:48 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/satamps"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/new" for ::1 at 2020-04-11 03:15:55 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial stamp/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/hachinomasahiro/Desktop/stamp/app/views"
+):
+    1: <h1>新規投稿ページ</h1>
+    2: <%= render :partial => "stamp/index" %>
+    3: <%= form_tag('/posts', method: :post) do %> 
+    4:   <input type="text" name="content"> : テキストを入力してください<br>
+    5:   <input type="tel" name="stamp_id"　maxlength="1"> : スタンプの画像を数字で入力してください<br>
+  
+app/views/posts/new.html.erb:2:in `_app_views_posts_new_html_erb__2820394087672612788_70168372150720'
+Started GET "/posts/new" for ::1 at 2020-04-11 03:18:08 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial stamps/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/hachinomasahiro/Desktop/stamp/app/views"
+):
+    1: <h1>新規投稿ページ</h1>
+    2: <%= render :partial => "stamps/index" %>
+    3: <%= form_tag('/posts', method: :post) do %> 
+    4:   <input type="text" name="content"> : テキストを入力してください<br>
+    5:   <input type="tel" name="stamp_id"　maxlength="1"> : スタンプの画像を数字で入力してください<br>
+  
+app/views/posts/new.html.erb:2:in `_app_views_posts_new_html_erb__2820394087672612788_70168417454860'
+Started GET "/posts/new" for ::1 at 2020-04-11 03:34:40 +0900
+  [1m[35m (3.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 168ms (Views: 145.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 03:34:52 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (1.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (0.9ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (0.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 101ms (Views: 81.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 03:36:09 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (0.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>スタンプ一覧</h1>
+    2: <%= image_tag @stamp.image width: '375' %>
+    3: <%= image_tag @stamp2.image width: '375' %>
+    4: <%= image_tag @stamp3.image  width: '375'%>
+  
+app/views/stamps/index.html.erb:2:in `_app_views_stamps_index_html_erb___2492752455783801261_70168406060280'
+Started GET "/stamps" for ::1 at 2020-04-11 03:37:37 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (3.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (13.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (1.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 236ms (Views: 191.2ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 03:38:44 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (0.8ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (1.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 83ms (Views: 68.1ms | ActiveRecord: 2.7ms)
+
+
