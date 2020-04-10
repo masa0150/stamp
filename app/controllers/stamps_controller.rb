@@ -1,5 +1,5 @@
 class StampsController < ApplicationController
   def index
-    @stamp = Stamp.find(1)
+    @stamp = Stamp.all
   end
 end
