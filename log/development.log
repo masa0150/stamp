@@ -8432,3 +8432,132 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 95ms (Views: 65.3ms | ActiveRecord: 8.3ms)
 
 
+Started GET "/stamps" for ::1 at 2020-04-11 16:44:04 +0900
+  [1m[35m (1.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (1.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>スタンプ一覧</h1>
+    2: <% @stamps.each do |stamp| %>
+    3:   <div class="content">
+    4:     <div class="content__left">
+    5:       <div class="content__left--image"></div>
+  
+app/views/stamps/index.html.erb:2:in `_app_views_stamps_index_html_erb___2492752455783801261_70168407379580'
+Started GET "/stamps" for ::1 at 2020-04-11 16:45:19 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (0.2ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 8.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>スタンプ一覧</h1>
+    2: <% @stamps.each do |stamp| %>
+    3:   <div class="content">
+    4:     <div class="content__left">
+    5:       <div class="content__left--image"></div>
+  
+app/views/stamps/index.html.erb:2:in `_app_views_stamps_index_html_erb___2492752455783801261_70168363605860'
+Started GET "/stamps" for ::1 at 2020-04-11 16:45:50 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (0.8ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (0.9ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (1.7ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 103ms (Views: 88.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 16:47:51 +0900
+Processing by StampsController#index as HTML
+  Rendering stamps/index.html.erb within layouts/application
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/stamps/index.html.erb:2
+  Rendered stamps/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 68ms (Views: 51.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 16:50:09 +0900
+Processing by StampsController#index as HTML
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (25.7ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/views/stamps/index.html.erb:13: syntax error, unexpected tLABEL, expecting '='
+...er.append=( stamp.image ,width: '375' );@output_buffer.safe_...
+...                         ^~~~~~):
+  
+app/views/stamps/index.html.erb:13: syntax error, unexpected tLABEL, expecting '='
+Started GET "/stamps" for ::1 at 2020-04-11 16:50:35 +0900
+Processing by StampsController#index as HTML
+  Rendering stamps/index.html.erb within layouts/application
+  [1m[36mStamp Load (2.0ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/stamps/index.html.erb:2
+  Rendered stamps/index.html.erb within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    10:       </div>
+    11:       <div class="content__right__bottom">
+    12:         <div class="content__right__bottom--date">
+    13:           <%= image_tag @stamp.image ,width: '375' %>
+    14:         </div>
+    15:       </div>
+    16:     </div>
+  
+app/views/stamps/index.html.erb:13:in `block in _app_views_stamps_index_html_erb___2492752455783801261_70168415994000'
+app/views/stamps/index.html.erb:2:in `_app_views_stamps_index_html_erb___2492752455783801261_70168415994000'
+Started GET "/stamps" for ::1 at 2020-04-11 16:50:56 +0900
+Processing by StampsController#index as HTML
+  Rendering stamps/index.html.erb within layouts/application
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/stamps/index.html.erb:2
+  Rendered stamps/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 54ms (Views: 47.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 16:52:59 +0900
+Processing by StampsController#index as HTML
+  Rendering stamps/index.html.erb within layouts/application
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/stamps/index.html.erb:2
+  Rendered stamps/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 52ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 16:53:28 +0900
+Processing by StampsController#index as HTML
+  Rendering stamps/index.html.erb within layouts/application
+  [1m[36mStamp Load (4.5ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/stamps/index.html.erb:2
+  Rendered stamps/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 86ms (Views: 76.9ms | ActiveRecord: 4.5ms)
+
+
