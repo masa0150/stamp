@@ -7639,3 +7639,796 @@ Processing by StampsController#index as HTML
 Completed 200 OK in 83ms (Views: 68.1ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/posts" for ::1 at 2020-04-11 08:08:22 +0900
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:08:41 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:09:00 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:09:48 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:10:03 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:12:14 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:13:05 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:14:10 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:14:37 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:15:06 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for ::1 at 2020-04-11 08:15:41 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/posts" for ::1 at 2020-04-11 08:15:45 +0900
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/posts" for ::1 at 2020-04-11 08:16:18 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kuOB8pNeOOL4d2SXJvRxqYdSy0ngL48ap+Gfgm2VmMEMbq0Pcq/yTK/6T1lI15R/kFxZevuNuU9nVDcB14mxwQ==", "content"=>"test", "stamp_id"=>""}
+Unpermitted parameters: :utf8, :authenticity_token
+{"content"=>"test", "stamp_id"=>""}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:11
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/posts_controller.rb:11
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 135ms (Views: 53.6ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-11 08:16:21 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (1.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 93ms (Views: 80.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:16:24 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 51ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:18:55 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 91ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:19:39 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 53ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-11 08:19:44 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (85.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (0.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (181.3ms)
+Completed 200 OK in 247ms (Views: 118.4ms | ActiveRecord: 111.4ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-11 08:19:45 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (1.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 75ms (Views: 66.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:20:42 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 102ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:22:28 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:22:30 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 53ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:23:38 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 59ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:23:52 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 78ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:28:01 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-11 08:28:02 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.7ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (96.2ms)
+Completed 200 OK in 194ms (Views: 138.3ms | ActiveRecord: 33.4ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-11 08:28:04 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 62ms (Views: 54.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:28:05 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 127ms (Views: 113.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:28:08 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 78ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:28:26 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 64ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:28:27 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 54ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:28:55 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/views/posts/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/posts/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/posts/new" for ::1 at 2020-04-11 08:29:16 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (65.8ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     8: <div class="stamps">
+     9: <h4>＜スタンプ一覧＞</h4>
+    10: 
+    11: <%= image_tag @stamp.image ,width: '375' %>
+    12: <%= image_tag @stamp2.image ,width: '375' %>
+    13: <%= image_tag @stamp3.image ,width: '375'%>
+  
+app/views/posts/new.html.erb:11:in `_app_views_posts_new_html_erb__2820394087672612788_70168380821060'
+Started GET "/posts/new" for ::1 at 2020-04-11 08:29:49 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     8: <div class="stamps">
+     9: <h4>＜スタンプ一覧＞</h4>
+    10: 
+    11: <%= image_tag @stamp.image ,width: '375' %>
+    12: <%= image_tag @stamp2.image ,width: '375' %>
+    13: <%= image_tag @stamp3.image ,width: '375'%>
+    14: </div>
+  
+app/views/posts/new.html.erb:11:in `_app_views_posts_new_html_erb__2820394087672612788_70168405266560'
+Started GET "/posts/new" for ::1 at 2020-04-11 08:30:29 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     8: 
+     9: <h4>＜スタンプ一覧＞</h4>
+    10: 
+    11: <%= image_tag @stamp.image ,width: '375' %>
+    12: <%= image_tag @stamp2.image ,width: '375' %>
+    13: <%= image_tag @stamp3.image ,width: '375'%>
+  
+app/views/posts/new.html.erb:11:in `_app_views_posts_new_html_erb__2820394087672612788_70168380759140'
+Started GET "/posts/new" for ::1 at 2020-04-11 08:31:12 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     8: 
+     9: <h4>＜スタンプ一覧＞</h4>
+    10: 
+    11: <%= image_tag @stamp.image ,width: '375' %>
+    12: <%= image_tag @stamp2.image ,width: '375' %>
+    13: <%= image_tag @stamp3.image ,width: '375'%>
+  
+app/views/posts/new.html.erb:11:in `_app_views_posts_new_html_erb__2820394087672612788_70168365086840'
+Started GET "/posts/new" for ::1 at 2020-04-11 08:31:15 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     8: 
+     9: <h4>＜スタンプ一覧＞</h4>
+    10: 
+    11: <%= image_tag @stamp.image ,width: '375' %>
+    12: <%= image_tag @stamp2.image ,width: '375' %>
+    13: <%= image_tag @stamp3.image ,width: '375'%>
+  
+app/views/posts/new.html.erb:11:in `_app_views_posts_new_html_erb__2820394087672612788_70168418588920'
+Started GET "/posts/new" for ::1 at 2020-04-11 08:32:22 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     8: 
+     9: <h4>＜スタンプ一覧＞</h4>
+    10: 
+    11: <%= image_tag @stamp.image ,width: '375' %>
+    12: <%= image_tag @stamp2.image ,width: '375' %>
+    13: <%= image_tag @stamp3.image ,width: '375'%>
+  
+app/views/posts/new.html.erb:11:in `_app_views_posts_new_html_erb__2820394087672612788_70168419656020'
+Started GET "/posts/new" for ::1 at 2020-04-11 08:33:06 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     8: 
+     9: <h4>＜スタンプ一覧＞</h4>
+    10: 
+    11: <%= image_tag @stamp.image ,width: '375' %>
+    12: <%= image_tag @stamp2.image ,width: '375' %>
+    13: <%= image_tag @stamp3.image ,width: '375'%>
+  
+app/views/posts/new.html.erb:11:in `_app_views_posts_new_html_erb__2820394087672612788_70168405712520'
+Started GET "/posts/new" for ::1 at 2020-04-11 08:33:22 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+     8: 
+     9: <h4>＜スタンプ一覧＞</h4>
+    10: 
+    11: <%= image_tag @stamp.image ,width: '375' %>
+    12: <%= image_tag @stamp2.image ,width: '375' %>
+    13: <%= image_tag @stamp3.image ,width: '375'%>
+  
+app/views/posts/new.html.erb:11:in `_app_views_posts_new_html_erb__2820394087672612788_70168418861100'
+Started GET "/posts/new" for ::1 at 2020-04-11 08:34:09 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 72ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-11 08:34:12 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (4.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 161ms (Views: 94.0ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/stamps" for ::1 at 2020-04-11 08:34:23 +0900
+Processing by StampsController#index as HTML
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:3
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:4
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/stamps_controller.rb:5
+  Rendering stamps/index.html.erb within layouts/application
+  Rendered stamps/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 63ms (Views: 54.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:35:26 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 52ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 08:48:41 +0900
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 102ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-11 08:48:43 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (6.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (18.0ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps` WHERE `stamps`.`post_id` IN ('1', '12', '13', '14', '15', '16')[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (172.2ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 41.0ms)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: Unknown column 'stamps.post_id' in 'where clause': SELECT `stamps`.* FROM `stamps` WHERE `stamps`.`post_id` IN ('1', '12', '13', '14', '15', '16')):
+    2: 
+    3: <%= link_to '新規投稿', '/posts/new' %>
+    4: 
+    5: <% @posts.each do |post| %>
+    6:   <div class="post">
+    7:     <div class="post-date">
+    8:       投稿日時：<%= post.created_at %>
+  
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___2300620320404367135_70168417443420'
+Started GET "/posts" for ::1 at 2020-04-11 08:49:39 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (1.2ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps` WHERE `stamps`.`post_id` IN ('1', '12', '13', '14', '15', '16')[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (26.0ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 8.9ms)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: Unknown column 'stamps.post_id' in 'where clause': SELECT `stamps`.* FROM `stamps` WHERE `stamps`.`post_id` IN ('1', '12', '13', '14', '15', '16')):
+    2: 
+    3: <%= link_to '新規投稿', '/posts/new' %>
+    4: 
+    5: <% @posts.each do |post| %>
+    6:   <div class="post">
+    7:     <div class="post-date">
+    8:       投稿日時：<%= post.created_at %>
+  
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___2300620320404367135_70168424420740'
+Started GET "/posts" for ::1 at 2020-04-11 08:49:52 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (51.3ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 33.1ms)
+
+
+  
+ActionView::Template::Error (Association named 'stamps' was not found on Post; perhaps you misspelled it?):
+    2: 
+    3: <%= link_to '新規投稿', '/posts/new' %>
+    4: 
+    5: <% @posts.each do |post| %>
+    6:   <div class="post">
+    7:     <div class="post-date">
+    8:       投稿日時：<%= post.created_at %>
+  
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___2300620320404367135_70168380360360'
+Started GET "/posts" for ::1 at 2020-04-11 08:50:14 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (4.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (0.8ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 120ms (Views: 97.4ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-11 08:52:48 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (20.5ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (Association named 'stamps' was not found on Post; perhaps you misspelled it?):
+    2: 
+    3: <%= link_to '新規投稿', '/posts/new' %>
+    4: 
+    5: <% @posts.each do |post| %>
+    6:   <div class="post">
+    7:     <div class="post-date">
+    8:       投稿日時：<%= post.created_at %>
+  
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___2300620320404367135_70168404614660'
+Started GET "/posts" for ::1 at 2020-04-11 08:53:07 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (1.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 94ms (Views: 75.1ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-11 16:23:42 +0900
+  [1m[35m (17.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (6.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`post_id` = 1 LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendered posts/index.html.erb within layouts/application (107.9ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 39.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Stamp::ActiveRecord_Associations_CollectionProxy:0x00007fa2b5ff0118>):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-stamp-image">
+    14:       <strong><%= link_to image_tag(post.stamp.image , width: '375'), "/posts/#{post.stamp_id}" %></strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb___2300620320404367135_70168371941800'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___2300620320404367135_70168371941800'
+Started GET "/posts" for ::1 at 2020-04-11 16:24:23 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (1.2ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`post_id` = 1 LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendered posts/index.html.erb within layouts/application (45.0ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 10.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Stamp::ActiveRecord_Associations_CollectionProxy:0x00007fa2b2db91b8>):
+    11:       <%= post.content %>
+    12:     </div>
+    13:     <div class="post-stamp-image">
+    14:       <strong><%= link_to image_tag(post.stamp.image , width: '375'), "/posts/#{post.stamp_id}" %></strong>
+    15:     </div>
+    16:   </div>
+    17: <% end %>
+  
+app/views/posts/index.html.erb:14:in `block in _app_views_posts_index_html_erb___2300620320404367135_70168394085040'
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb___2300620320404367135_70168394085040'
+Started GET "/posts" for ::1 at 2020-04-11 16:24:35 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (2.8ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (62.8ms)
+Completed 200 OK in 152ms (Views: 123.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-11 16:24:38 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <% end %>
+     8: 
+     9: <h1>＜スタンプ一覧＞</h1>
+    10: <% @post.each do |p| %>
+    11:   <%= p.content %>
+    12:   <% p.stamps.each do |stamp| %>
+    13:     <%= stamp.name %>
+  
+app/views/posts/new.html.erb:10:in `_app_views_posts_new_html_erb__2820394087672612788_70168424253660'
+Started GET "/posts/new" for ::1 at 2020-04-11 16:25:05 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <% end %>
+     8: 
+     9: <h1>＜スタンプ一覧＞</h1>
+    10: <% @post.each do |p| %>
+    11:   <%= p.content %>
+    12:   <% p.stamps.each do |stamp| %>
+    13:     <%= stamp.name %>
+  
+app/views/posts/new.html.erb:10:in `_app_views_posts_new_html_erb__2820394087672612788_70168394573060'
+Started GET "/posts/new" for ::1 at 2020-04-11 16:26:39 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7: <% end %>
+     8: 
+     9: <h1>＜スタンプ一覧＞</h1>
+    10: <% @post.each do |p| %>
+    11:   <%= p.content %>
+    12:   <% p.stamps.each do |stamp| %>
+    13:     <%= stamp.name %>
+  
+app/views/posts/new.html.erb:10:in `_app_views_posts_new_html_erb__2820394087672612788_70168365431020'
+Started GET "/posts/new" for ::1 at 2020-04-11 16:27:56 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/hachinomasahiro/Desktop/stamp/app/views/posts/new.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/posts/new.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/posts/new" for ::1 at 2020-04-11 16:28:15 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp2' for nil:NilClass):
+     7: <% end %>
+     8: 
+     9: <h1>＜スタンプ一覧＞</h1>
+    10: <%= image_tag @post.stamp2.image ,width: '375' %>
+  
+app/views/posts/new.html.erb:10:in `_app_views_posts_new_html_erb__2820394087672612788_70168406260340'
+Started GET "/posts/new" for ::1 at 2020-04-11 16:28:18 +0900
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stamp2' for nil:NilClass):
+     7: <% end %>
+     8: 
+     9: <h1>＜スタンプ一覧＞</h1>
+    10: <%= image_tag @post.stamp2.image ,width: '375' %>
+  
+app/views/posts/new.html.erb:10:in `_app_views_posts_new_html_erb__2820394087672612788_70168419104820'
+Started GET "/posts" for ::1 at 2020-04-11 16:28:57 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 95ms (Views: 65.3ms | ActiveRecord: 8.3ms)
+
+

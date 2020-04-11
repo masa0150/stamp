@@ -1,5 +1,5 @@
 class Stamp < ApplicationRecord
-  has_many :comments
+  has_many :post
   def index 
     @stamps = Stamp.select("image")
   end
