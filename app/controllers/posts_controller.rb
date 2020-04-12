@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @stamps = Stamp.all
   end
 
   def create
