@@ -10,11 +10,11 @@
 
 <% @stamps.each do |stamp| %>
   <div class="stamp">
-  <button id="Button" ><%= image_tag stamp.image ,width: '375' %></button>
+  <button id="<%= stamp.id %>" value="stamp ID" onclick="getId(this);"><%= image_tag stamp.image ,width: '375' %></button>
   </div>
 <% end %>
 <body>
     <script src="script.js"></script>
 </body>
 
-<input type="button" id="id01" value="stamp ID" onclick="getId(this);">
+
