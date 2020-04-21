@@ -4,4 +4,6 @@ function getId(stamp){
   var test = id_value;
   console.log(test);
   
+  const result = $('text').attr('id');
+  console.log( result );
 }
