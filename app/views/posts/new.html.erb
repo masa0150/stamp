@@ -7,7 +7,7 @@
 <% end %>
 
 <h1>＜スタンプ一覧＞</h1>
-<p id="text">サンプルテキスト</p>
+
 <% @stamps.each do |stamp| %>
   <div class="stamp">
   <button id="<%= stamp.id %>" value="stamp ID" onclick="getId(this);"><%= image_tag stamp.image ,width: '375' %></button>
