@@ -1,0 +1,17 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post-date">
+        投稿日時：<%= post.created_at %>
+      </div>
+      <div class="post-content">
+        <%= post.content %>
+      </div>
+      <div class="post-stamp-image">
+        <strong><%= link_to image_tag(post.stamp.image , width: '250'), "/posts/#{post.stamp_id}" %></strong>
+      </div>
+    </div>
+  <% end %>
+</div>

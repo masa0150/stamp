@@ -1,20 +1,28 @@
-<h1>新規投稿ページ</h1>
+<!DOCTYPE html>
+<html>
+ <head>
+ <div class="contents row"><h1>新規投稿ページ</h1></div>
+ <head>
 <%= form_tag('/posts', method: :post) do %> 
-  <input type="text" name="content"> : テキストを入力してください<br>
-  <input type="tel" name="stamp_id"　maxlength="1"　> : スタンプの画像を数字で入力してください<br>
+  <div class="contents row">
+   テキストを入力してください<br>
+  <input type="text" name="content"> 
+   スタンプの画像を数字で入力してください<br>
   <input type="tel" name="stamp_id"　maxlength="1" id="text" value="stamp ID">
   <input type="submit" value="投稿する">
+  </div>
 <% end %>
 
-<h1>＜スタンプ一覧＞</h1>
+<div class="contents row"><h1>＜スタンプ一覧＞</h1></div>
 
 <% @stamps.each do |stamp| %>
-  <div class="stamp">
+  <div class="contents row">
   <button id="<%= stamp.id %>" value="stamp ID" onclick="getId(this);"><%= image_tag stamp.image ,width: '375' %></button>
   </div>
 <% end %>
 <body>
     <script src="script.js"></script>
 </body>
+</html>
 
 
