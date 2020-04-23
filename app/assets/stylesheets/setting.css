@@ -467,6 +467,15 @@ ul li {
   max-width: 660px;
   *zoom: 1;
 }
+.row2 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 660px;
+  *zoom: 1;
+}
 .row .grid-1,
 .row .grid-2,
 .row .grid-3,

@@ -1,7 +1,9 @@
 <h1>スタンプ一覧</h1>
 <% @stamps.each do |stamp| %>
-  <div class="stamp">
-      <%= image_tag stamp.image ,width: '375' %>
+  <div class="post">
+    <div class="stamp">
+        <%= image_tag stamp.image ,width: '375' %>
+    </div>
   </div>
 <% end %>
 
