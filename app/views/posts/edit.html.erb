@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <div class="contents row"><h1>編集する</h1></div>
+ <head>
+<%= form_tag('/posts', method: :post) do %> 
+  <div class="contents row">
+   テキストを入力してください<br>
+  <input type="text" name="content"> 
+   スタンプの画像を数字で入力してください<br>
+  <input type="tel" name="stamp_id"　maxlength="1" id="text" value="stamp ID">
+  <input type="submit" value="投稿する">
+  </div>
+<% end %>
+
+<div class="contents row"><h1>＜スタンプ一覧＞</h1></div>
+
+<% @stamps.each do |stamp| %>
+  <div class="contents row2">
+  <div class="img">
+  <button id="<%= stamp.id %>" value="stamp ID" onclick="getId(this);"><%= image_tag stamp.image ,width: '375' %></button>
+  </div>
+  </div>
+<% end %>
+<body>
+    <script src="script.js"></script>
+</body>
+</html>

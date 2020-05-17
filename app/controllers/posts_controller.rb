@@ -14,6 +14,20 @@ class PostsController < ApplicationController
     Post.create(post_params)
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+  end
+
+  def edit
+    @stamps = Stamp.all
+    @tweet = Post.find(params[:id])
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+  end
   private
   def post_params
     params.permit(:content ,:stamp_id).merge(user_id: current_user.id)

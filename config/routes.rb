@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   get 'posts/new', to: 'posts#new'
   post 'posts', to: 'posts#create'
   get 'stamps', to: 'stamps#index'
+  get 'posts/edit', to: 'posts#edit'
+  get 'stamps', to: 'stamps#edit'
   resources :users, only: :show
+  resources :posts, only: [:index, :new, :create, :destroy, :edit, :update]
 end
