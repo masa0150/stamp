@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-<div class="contents row"><h1>トップページ</h1></div>
-
 <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
   <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
   <%= form.submit "検索", class: "search-btn" %>
 <% end %>
-
 <% @posts.each do |post| %>
   <div class="contents row">
   <div class="post">  
@@ -38,10 +32,4 @@
     </div>
   </div>
 <% end %>
-</body>
-</html>
-
-
-
-
-
+</div>
