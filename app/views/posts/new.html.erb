@@ -14,10 +14,10 @@
 <% end %>
 
 <div class="contents row"><h1>＜スタンプ一覧＞</h1></div>
-<div class="contents row3">
+<div class="contents stamptop">
 <% @stamps.each do |stamp| %>
   
-  <div class="contents row2">
+  <div class="contents stamp2">
   <div class="img">
   <button id="<%= stamp.id %>" value="stamp ID" onclick="getId(this);"><%= image_tag stamp.image ,width: '375' %></button>
   </div>

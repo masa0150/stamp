@@ -467,11 +467,11 @@ ul li {
   max-width: 660px;
   *zoom: 1;
 }
-.row2 {
+.stamp2 {
   width: calc(100%/4);
   float: left;
 }
-.row3 {
+.stamptop {
   width: 600px;
   height: 200px;
   overflow: auto;
