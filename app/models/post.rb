@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   belongs_to :stamp
   belongs_to :user
 
-  validates :text, presence: true
+  
   has_many :comments
 
   def self.search(search)
