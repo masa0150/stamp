@@ -7,4 +7,18 @@
 .post-date{
   color: gray;
 }
-
+.stamp2 {
+  width: calc(100%/4);
+  float: left;
+}
+.stamptop {
+  width: 600px;
+  height: 200px;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 660px;
+  *zoom: 1;
+}
