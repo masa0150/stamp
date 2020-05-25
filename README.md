@@ -2,7 +2,7 @@
 登録されたスタンプ画像とメッセージが投稿できるアプリです。
 
 # DEMO
-https://gyazo.com/1c55650d64d6a7bc34c1e9490f8e33e3https://gyazo.com/1c55650d64d6a7bc34c1e9490f8e33e3
+<img width="674" alt="4d9add1f93c4845e270b7fc9bf4f8b34" src="https://user-images.githubusercontent.com/59645298/82837691-c14dac00-9f04-11ea-880e-444c96db94b0.png">
 
 http://54.238.159.136:3000/posts
 
