@@ -33896,3 +33896,1470 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-06-13 22:08:40 +0900
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:11
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  Rendered posts/index.html.erb within layouts/application (129.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 566ms (Views: 515.7ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-13 22:12:46 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:24
+  Rendered posts/index.html.erb within layouts/application (29.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 71ms (Views: 63.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-13 22:13:39 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:11
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:11
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:21
+  Rendered posts/index.html.erb within layouts/application (23.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 58ms (Views: 49.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-13 22:53:11 +0900
+  [1m[35m (2.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (1.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (52.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 115ms (Views: 94.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-13 22:57:10 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.7ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (43.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 96ms (Views: 84.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-06-13 22:58:16 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/posts/new.html.erb:18
+  Rendered posts/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 70ms (Views: 56.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/script.js" for ::1 at 2020-06-13 22:58:16 +0900
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/posts" for ::1 at 2020-06-13 22:58:30 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f/q1qCWbTHmX530plw16uZAocwUmTeK0FDEqUwb6g5c3uoEhWJYAK+8xuW4AY5/oKb+YnYGB7l/XPK7yRrQsfQ==", "content"=>"a", "stamp_id"=>"3"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+Unpermitted parameters: :utf8, :authenticity_token
+{"content"=>"a", "stamp_id"=>"3", "user_id"=>3}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:15
+  [1m[36mStamp Load (1.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:15
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:15
+  [1m[36mPost Create (11.9ms)[0m  [1m[32mINSERT INTO `posts` (`stamp_id`, `content`, `created_at`, `updated_at`, `user_id`) VALUES (3, 'a', '2020-06-13 13:58:30', '2020-06-13 13:58:30', 3)[0m
+  ↳ app/controllers/posts_controller.rb:15
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:15
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 113ms (Views: 40.0ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-13 22:58:32 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (36.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 88ms (Views: 75.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-06-13 23:19:42 +0900
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mStamp Load (0.7ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/posts/new.html.erb:18
+  Rendered posts/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 99ms (Views: 65.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/script.js" for ::1 at 2020-06-13 23:19:43 +0900
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-06-13 23:20:08 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (22.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (1.9ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (110.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 173ms (Views: 126.8ms | ActiveRecord: 25.9ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-13 23:20:09 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mStamp Load (1.9ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (3.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (69.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 114ms (Views: 96.7ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-13 23:20:47 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (42.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 80ms (Views: 71.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-13 23:59:23 +0900
+  [1m[35m (9.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (165.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 454ms (Views: 397.7ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-06-14 00:00:22 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/posts/new.html.erb:18
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 24.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/script.js" for ::1 at 2020-06-14 00:00:23 +0900
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-06-14 00:01:11 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.8ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (33.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 78ms (Views: 66.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-06-14 00:01:13 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+Started GET "/posts/script.js" for ::1 at 2020-06-14 00:01:13 +0900
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/posts/new.html.erb:18
+  Rendered posts/new.html.erb within layouts/application (2.3ms)
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 200 OK in 222ms (Views: 209.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-06-14 11:08:24 +0900
+  [1m[35m (11.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendered posts/new.html.erb within layouts/application (627.4ms)
+Completed 500 Internal Server Error in 698ms (ActiveRecord: 8.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fcab611f8e0>:0x00007fcab3b5e5e8>
+Did you mean?  @posts):
+     9:   <input type="text" name="content"> 
+    10:    スタンプの画像を数字で入力してください<br>
+    11:   <input type="tel" name="stamp_id"　maxlength="1" id="text" value="stamp ID">
+    12:   <strong><%= link_to image_tag(post.stamp.image ), "/posts/#{post.stamp_id}" %></strong>
+    13:   <input type="submit" value="投稿する">
+    14:   </div>
+    15: <% end %>
+  
+app/views/posts/new.html.erb:12:in `block in _app_views_posts_new_html_erb___3192950771596652118_70254287584940'
+app/views/posts/new.html.erb:6:in `_app_views_posts_new_html_erb___3192950771596652118_70254287584940'
+Started GET "/posts/new" for ::1 at 2020-06-14 14:28:30 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendered posts/new.html.erb within layouts/application (482.5ms)
+Completed 500 Internal Server Error in 499ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fcab611f8e0>:0x00007fcaba2a3028>
+Did you mean?  @posts):
+     9:   <input type="text" name="content"> 
+    10:    スタンプの画像を数字で入力してください<br>
+    11:   <input type="tel" name="stamp_id"　maxlength="1" id="text" value="stamp ID">
+    12:   <strong><%= link_to image_tag(post.stamp.image ), "/post/#{post.stamp_id}" %></strong>
+    13:   <input type="submit" value="投稿する">
+    14:   </div>
+    15: <% end %>
+  
+app/views/posts/new.html.erb:12:in `block in _app_views_posts_new_html_erb___3192950771596652118_70254341725400'
+app/views/posts/new.html.erb:6:in `_app_views_posts_new_html_erb___3192950771596652118_70254341725400'
+Started GET "/posts/new" for ::1 at 2020-06-14 14:28:54 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendered posts/new.html.erb within layouts/application (334.2ms)
+Completed 500 Internal Server Error in 352ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fcab611f8e0>:0x00007fcab3dd3940>
+Did you mean?  @posts):
+     9:   <input type="text" name="content"> 
+    10:    スタンプの画像を数字で入力してください<br>
+    11:   <input type="tel" name="stamp_id"　maxlength="1" id="text" value="stamp ID">
+    12:   <strong><%= link_to image_tag(post.stamp.image ), "/＠posts/#{post.stamp_id}" %></strong>
+    13:   <input type="submit" value="投稿する">
+    14:   </div>
+    15: <% end %>
+  
+app/views/posts/new.html.erb:12:in `block in _app_views_posts_new_html_erb___3192950771596652118_70254342193340'
+app/views/posts/new.html.erb:6:in `_app_views_posts_new_html_erb___3192950771596652118_70254342193340'
+Started GET "/posts/new" for ::1 at 2020-06-14 14:29:18 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.1ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` LIMIT 11[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendered posts/new.html.erb within layouts/application (343.3ms)
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fcab611f8e0>:0x00007fcabacc4ed0>
+Did you mean?  @posts):
+     9:   <input type="text" name="content"> 
+    10:    スタンプの画像を数字で入力してください<br>
+    11:   <input type="tel" name="stamp_id"　maxlength="1" id="text" value="stamp ID">
+    12:   <strong><%= link_to image_tag(post.stamp.image ), "/posts/#{＠posts.stamp_id}" %></strong>
+    13:   <input type="submit" value="投稿する">
+    14:   </div>
+    15: <% end %>
+  
+app/views/posts/new.html.erb:12:in `block in _app_views_posts_new_html_erb___3192950771596652118_70254347038440'
+app/views/posts/new.html.erb:6:in `_app_views_posts_new_html_erb___3192950771596652118_70254347038440'
+Started GET "/posts/new" for ::1 at 2020-06-14 14:30:42 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:41
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/posts/new.html.erb:18
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 42ms (Views: 36.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/script.js" for ::1 at 2020-06-14 14:30:42 +0900
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2020-06-14 14:30:47 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (24.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 57ms (Views: 44.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-14 14:32:17 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:  
+    13:  <div class="contents row"><h1>＜スタンプ一覧＞</h1></div>
+    14:  <div class="stamptop">
+    15:  <% @stamps.each do |stamp| %>
+    16:    
+    17:    <div class="stamp2">
+    18:    <div class="img">
+  
+app/views/posts/index.html.erb:15:in `_app_views_posts_index_html_erb___4530053670454037950_70254291666460'
+Started GET "/posts" for ::1 at 2020-06-14 14:32:58 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mStamp Load (0.2ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  Rendered posts/index.html.erb within layouts/application (62.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 99ms (Views: 64.1ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/script.js" for ::1 at 2020-06-14 14:32:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/script.js"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/posts" for ::1 at 2020-06-14 14:33:08 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s7bQkJGaA6GwbrPQTic95odm47XfSCKw2ZMBzysc4J41AHqDgOGFVGFm1LLhOTacmvEMpjgVq7ZyOhlMN+HYlg==", "content"=>"test", "stamp_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:42
+Unpermitted parameters: :utf8, :authenticity_token
+{"content"=>"test", "stamp_id"=>"1", "user_id"=>3}
+Unpermitted parameters: :utf8, :authenticity_token
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:16
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:16
+  [1m[36mPost Create (1.6ms)[0m  [1m[32mINSERT INTO `posts` (`stamp_id`, `content`, `created_at`, `updated_at`, `user_id`) VALUES (1, 'test', '2020-06-14 05:33:08', '2020-06-14 05:33:08', 3)[0m
+  ↳ app/controllers/posts_controller.rb:16
+  [1m[35m (38.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:16
+  Rendering posts/create.html.erb within layouts/application
+  Rendered posts/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 85ms (Views: 20.8ms | ActiveRecord: 40.8ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-14 14:33:10 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mStamp Load (0.5ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mStamp Load (1.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  Rendered posts/index.html.erb within layouts/application (33.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 69ms (Views: 59.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/script.js" for ::1 at 2020-06-14 14:33:10 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/script.js"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/new" for ::1 at 2020-06-14 14:33:49 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:42
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mStamp Load (0.8ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/posts/new.html.erb:18
+  Rendered posts/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 43ms (Views: 36.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/script.js" for ::1 at 2020-06-14 14:33:49 +0900
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/3" for ::1 at 2020-06-14 14:33:52 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 3[0m
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mStamp Load (0.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:13
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 46ms (Views: 28.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts" for ::1 at 2020-06-14 14:33:55 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+Started GET "/script.js" for ::1 at 2020-06-14 14:33:56 +0900
+  [1m[36mStamp Load (0.6ms)[0m  [1m[34mSELECT `stamps`.* FROM `stamps`[0m
+  ↳ app/views/posts/index.html.erb:15
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:34
+  [1m[35m (4.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 2, 1)[0m
+  ↳ /Users/hachinomasahiro/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  ↳ app/views/posts/index.html.erb:34
+  
+  [1m[36mStamp Load (2.3ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 1 LIMIT 1[0m
+ActionController::RoutingError (No route matches [GET] "/script.js"):
+  
+  ↳ app/views/posts/index.html.erb:44
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mStamp Load (6.6ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.1ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mStamp Load (0.4ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE Stamp Load (0.0ms)[0m  [1m[34mSELECT  `stamps`.* FROM `stamps` WHERE `stamps`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:44
+  Rendered posts/index.html.erb within layouts/application (47.0ms)
+  [1m[36mUser Load (44.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 707ms (Views: 644.7ms | ActiveRecord: 56.3ms)
+
+
+Started GET "/script.js" for ::1 at 2020-06-14 14:33:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/script.js"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
